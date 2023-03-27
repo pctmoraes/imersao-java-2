@@ -23,4 +23,4 @@ Com o pacote `java.net.http` foram realizados:
 <br>
 
 
-![Aula_1](https://github.com/pctmoraes/imersao-java-2/blob/main/imagem_aula_um.png)
+![Aula_1](https://github.com/pctmoraes/imersao-java-2/blob/main/imdb-api/img/imagem_aula_um.png)
