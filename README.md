@@ -22,5 +22,5 @@ Com o pacote `java.net.http` foram realizados:
 4. Com o desafio proposto pelos mentores foi refatorada a pontuação de modo a possuir um melhor layout com cores e emojis.
 <br>
 
-
+#### Imagem do println do projeto da Aula 1
 ![Aula_1](https://github.com/pctmoraes/imersao-java-2/blob/main/imdb-api/img/imagem_aula_um.png)
