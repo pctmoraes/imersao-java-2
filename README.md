@@ -21,4 +21,6 @@ Com o pacote `java.net.http` foram realizados:
 3. A impressão em tela dos seguintes dados do sfilmes: título, imagem, pontuação.
 4. Com o desafio proposto pelos mentores foi refatorada a pontuação de modo a possuir um melhor layout com cores e emojis.
 <br>
+
+
 ![Aula_1](https://github.com/pctmoraes/imersao-java-2/blob/main/imagem_aula_um.png)
