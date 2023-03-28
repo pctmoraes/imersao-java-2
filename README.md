@@ -30,5 +30,4 @@ Nessa aula foi desenvolvida uma nova classe para gerar stickers (para whatsapp, 
 
 #### Imagem do sticker da Aula 2 (Your Name)
 
-![Aula_2]
-https://github.com/pctmoraes/imersao-java-2/blob/main/imdb-api/img/aula_2.png
+![Aula_2](https://github.com/pctmoraes/imersao-java-2/blob/main/imdb-api/img/aula_2.png)
