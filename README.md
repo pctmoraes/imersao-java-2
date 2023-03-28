@@ -23,3 +23,12 @@ Com o pacote `java.net.http` foram realizados:
 
 #### Imagem do println do projeto da Aula 1
 ![Aula_1](https://github.com/pctmoraes/imersao-java-2/blob/main/imdb-api/img/aula_1.png)
+
+### Aula 2 -> Gerando stickers
+
+Nessa aula foi desenvolvida uma nova classe para gerar stickers (para whatsapp, telegram etc) a partir dos pôsters dos filmes recuperados via api da Aula 1.
+
+#### Imagem do sticker da Aula 2 (Your Name)
+
+![Aula_2]
+https://github.com/pctmoraes/imersao-java-2/blob/main/imdb-api/img/aula_2.png
