@@ -5,7 +5,9 @@ import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 import java.util.List;
 import java.util.Map;
+import java.io.InputStream;
 import java.net.URI;
+import java.net.URL;
 
 public class App {
     public static final String ANSI_RESET = "\u001B[0m";
@@ -23,46 +25,56 @@ public class App {
         List<Map<String,String>> moviesList = parser.parse(body);
 
         // Printing the movies
-        for (Map<String,String> movie : moviesList) {
-            System.out.println("\nTitle: " + movie.get("title"));
-            System.out.println("Image: " + movie.get("image"));
+        var stickerMaker = new StickerFactory();
 
-            var movieRate = Float.parseFloat(movie.get("imDbRating"));
-            String stars = " ";
+        for (Map<String,String> movie : moviesList) {
+            var urlImagem = movie.get("image");
+            var title = movie.get("title");
+            // var movieRate = Float.parseFloat(movie.get("imDbRating"));
+            // var stars = " ";
+
+            InputStream inputStream = new URL(urlImagem).openStream();
+            var fileName = title + ".png";
+
+            stickerMaker.create(inputStream, fileName);
+
+
+            // System.out.println("\nTitle: " + movie.get("title"));
+            // System.out.println("Image: " + movie.get("image"));
             
-            switch ((int) movieRate) {
-                case 10:
-                    stars += "⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐";
-                    break;
-                case 9:
-                    stars += "⭐⭐⭐⭐⭐⭐⭐⭐⭐";
-                    break;
-                case 8:
-                    stars += "⭐⭐⭐⭐⭐⭐⭐⭐";
-                    break;
-                case 7:
-                    stars += "⭐⭐⭐⭐⭐⭐⭐";
-                    break;
-                case 6:
-                    stars += "⭐⭐⭐⭐⭐⭐";
-                    break;
-                case 5:
-                    stars += "⭐⭐⭐⭐⭐";
-                    break;
-                case 4:
-                    stars += "⭐⭐⭐⭐";
-                    break;
-                case 3:
-                    stars += "⭐⭐⭐";
-                    break;
-                case 2:
-                    stars += "⭐⭐";
-                    break;
-                case 1:
-                    stars += "⭐";
-                    break;
-            }
-            System.out.println(ANSI_PURPLE+"Rating: " + (int)movieRate + stars +" " + ANSI_RESET);  
+            // switch ((int) movieRate) {
+            //     case 10:
+            //         stars += "⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐";
+            //         break;
+            //     case 9:
+            //         stars += "⭐⭐⭐⭐⭐⭐⭐⭐⭐";
+            //         break;
+            //     case 8:
+            //         stars += "⭐⭐⭐⭐⭐⭐⭐⭐";
+            //         break;
+            //     case 7:
+            //         stars += "⭐⭐⭐⭐⭐⭐⭐";
+            //         break;
+            //     case 6:
+            //         stars += "⭐⭐⭐⭐⭐⭐";
+            //         break;
+            //     case 5:
+            //         stars += "⭐⭐⭐⭐⭐";
+            //         break;
+            //     case 4:
+            //         stars += "⭐⭐⭐⭐";
+            //         break;
+            //     case 3:
+            //         stars += "⭐⭐⭐";
+            //         break;
+            //     case 2:
+            //         stars += "⭐⭐";
+            //         break;
+            //     case 1:
+            //         stars += "⭐";
+            //         break;
+            // }
+            // System.out.println(ANSI_PURPLE+"Rating: " + (int)movieRate + stars +" " + ANSI_RESET);  
         }
 
     }
